@@ -4,6 +4,7 @@ import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import HireMe from "../pages/HireMe";
 import MainContainer from "../components/MainContainer";
+import NotFound from "../components/NotFound";
 
 const routes = [
   {
@@ -43,6 +44,15 @@ const routes = [
     element: (
       <MainContainer>
         <HireMe />
+      </MainContainer>
+    ),
+  },
+
+  {
+    path: "*",
+    element: (
+      <MainContainer>
+        <NotFound />
       </MainContainer>
     ),
   },

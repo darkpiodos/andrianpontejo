@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
-import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 import { scroller } from "react-scroll";
 

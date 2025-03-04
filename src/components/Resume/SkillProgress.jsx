@@ -39,7 +39,7 @@ export default function SkillProgress() {
           </div>
           <div className="w-full bg-gray-300 rounded-full h-2 dark:bg-gray-400/50">
             <div
-              className="h-2 rounded-full bg-gradient-to-r from-purple-500 to-darkSecondary transition-all duration-500 ease-in-out"
+              className="h-2 rounded-full bg-gradient-to-r from-darkSecondary to-purple-500 transition-all duration-500 ease-in-out"
               style={{ width: `${progress[index]}%` }}
             ></div>
           </div>

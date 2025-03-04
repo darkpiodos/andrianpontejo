@@ -14,6 +14,8 @@ export default {
       },
       backgroundImage: {
         "gradient-dark": "linear-gradient(to right, #8121d0, #291c3a)",
+        "gradient-darkTwo": "linear-gradient(to right, #291c3a ,#8121d0)",
+
         "gradient-secondaryDark": "linear-gradient(to right, #331c52, #291c3a)",
       },
       fontFamily: {

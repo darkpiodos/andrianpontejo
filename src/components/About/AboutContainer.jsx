@@ -34,19 +34,19 @@ export default function AboutContainer({ title, subtitle }) {
               </p>
               <div className="text-sm text-darkPrimary text-justify dark:text-lightPrimary w-full flex justify-between mt-8 md:mt-0">
                 <div className="space-y-3">
-                  <p className="bg-gradient-dark px-4 py-1 rounded-sm text-lightAccent">
+                  <p className="bg-darkAccent px-4 py-1 rounded-sm text-lightAccent">
                     Age:
                   </p>
-                  <p className="bg-gradient-dark px-4 py-1 rounded-sm text-lightAccent">
+                  <p className="bg-darkAccent px-4 py-1 rounded-sm text-lightAccent">
                     Address:
                   </p>
-                  <p className="bg-gradient-dark px-4 py-1 rounded-sm text-lightAccent">
+                  <p className="bg-darkAccent px-4 py-1 rounded-sm text-lightAccent">
                     Freelance:
                   </p>
-                  <p className="bg-gradient-dark px-4 py-1 rounded-sm text-lightAccent">
+                  <p className="bg-darkAccent px-4 py-1 rounded-sm text-lightAccent">
                     Residence:
                   </p>
-                  <p className="bg-gradient-dark px-4 py-1 rounded-sm text-lightAccent">
+                  <p className="bg-darkAccent px-4 py-1 rounded-sm text-lightAccent">
                     Birthday:
                   </p>
                 </div>

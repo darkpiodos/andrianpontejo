@@ -68,7 +68,7 @@ const ProfileInfo = () => {
           </div>
 
           <div className="w-full group">
-            <button className="w-full flex items-center justify-center gap-2 px-4 py-4 text-lightAccent hover:text-lightPrimary transition  bg-gradient-dark">
+            <button className="w-full flex items-center justify-center gap-2 px-4 py-4 text-lightAccent hover:text-lightPrimary transition  bg-darkAccent">
               <FaPaperPlane className="group-hover:animate-bounce" /> Contact Me
             </button>
           </div>

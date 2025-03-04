@@ -39,16 +39,36 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 5000,
   arrows: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
 
 export default function Testimony() {
   return (
-    <section className="w-full py-12 px-6 overflow-hidden ">
+    <section className="w-full py-12 px-0 overflow-hidden ">
       <Slider {...settings}>
         {testimonies.map((item) => (
           <div
             key={item.id}
-            className=" p-3 rounded-lg  text-center max-w-4xl mx-auto overflow-hidden"
+            className=" p-1 sm:p-2 md:p-3 rounded-lg  text-center max-w-4xl mx-auto overflow-hidden"
           >
             {" "}
             <div className="bg-lightSecondary dark:bg-darkPrimary/50 shadow-lg rounded-md p-4">

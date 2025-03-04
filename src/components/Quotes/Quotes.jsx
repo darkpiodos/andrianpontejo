@@ -27,7 +27,7 @@ export default function Quotes() {
         {quotesData.map((item, index) => (
           <div
             key={index}
-            className="p-3 rounded-lg shadow-lg flex flex-col gap-4 text-darkPrimary dark:text-lightPrimary bg-lightSecondary dark:bg-darkPrimary/50 "
+            className="p-3 rounded-md shadow-md flex flex-col gap-4 text-darkPrimary dark:text-lightPrimary bg-lightSecondary dark:bg-darkPrimary/50 "
           >
             <FaQuoteLeft className="text-4xl text-purple-500" />
             <p className="text-md italic">"{item.quote}"</p>

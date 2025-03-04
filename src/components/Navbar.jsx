@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +29,18 @@ function Navbar() {
     localStorage.setItem("theme", newTheme);
   };
 
+  const navigate = useNavigate();
+
+  const handleHireMeClick = () => {
+    navigate("/");
+    setTimeout(() => {
+      scroller.scrollTo("contactme", {
+        duration: 500,
+        smooth: true,
+        offset: -70,
+      });
+    }, 100);
+  };
   return (
     <nav className="bg-gradient-dark bg-darkPrimary fixed w-full z-20 top-0 start-0 shadow-md">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -44,20 +58,19 @@ function Navbar() {
           </span>
         </NavLink>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Link to="contactme" smooth={true} duration={500}>
-            <div className="group inline-block">
-              <button
-                type="button"
-                className="flex items-center gap-2 text-darkPrimary bg-white hover:bg-gray-100 focus:ring-2 focus:outline-none focus:ring-darkSecondary font-semibold rounded-lg text-md px-5 py-2.5 text-center 
+          <div className="group inline-block">
+            <button
+              onClick={handleHireMeClick}
+              type="button"
+              className="flex items-center gap-2 text-darkPrimary bg-white hover:bg-gray-100 focus:ring-2 focus:outline-none focus:ring-darkSecondary font-semibold rounded-lg text-md px-5 py-2.5 text-center 
       transition-all duration-300 ease-in-out transform hover:scale-105 
       hover:shadow-[0_0_20px_rgba(129,33,208,0.7)] 
       "
-              >
-                <MdOutlineMailOutline className="text-xl group-hover:animate-jello" />
-                Hire Me
-              </button>
-            </div>
-          </Link>
+            >
+              <MdOutlineMailOutline className="text-xl group-hover:animate-jello" />
+              Hire Me
+            </button>
+          </div>
           <button
             onClick={toggleMenu}
             type="button"
@@ -93,6 +106,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/"
+                onClick={toggleMenu}
                 className={({ isActive }) =>
                   `block py-2 px-4 rounded-sm ${
                     isActive
@@ -107,6 +121,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/about"
+                onClick={toggleMenu}
                 className={({ isActive }) =>
                   `block py-2 px-4 rounded-sm ${
                     isActive
@@ -121,6 +136,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/resume"
+                onClick={toggleMenu}
                 className={({ isActive }) =>
                   `block py-2 px-4 rounded-sm ${
                     isActive
@@ -135,6 +151,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/testimony"
+                onClick={toggleMenu}
                 className={({ isActive }) =>
                   `block py-2 px-4 rounded-sm ${
                     isActive
@@ -149,6 +166,7 @@ function Navbar() {
             <li>
               <NavLink
                 to="/quotes"
+                onClick={toggleMenu}
                 className={({ isActive }) =>
                   `block py-2 px-4 rounded-sm ${
                     isActive

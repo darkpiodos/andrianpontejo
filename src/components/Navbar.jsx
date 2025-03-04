@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
-
 import { useState, useEffect } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { HiOutlineSun, HiOutlineMoon } from "react-icons/hi2";
+import { Link } from "react-scroll";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -43,19 +44,20 @@ function Navbar() {
           </span>
         </NavLink>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <div className="group inline-block">
-            <button
-              type="button"
-              className="flex items-center gap-2 text-darkPrimary bg-white hover:bg-gray-100 focus:ring-2 focus:outline-none focus:ring-darkSecondary font-semibold rounded-lg text-md px-5 py-2.5 text-center 
+          <Link to="contactme" smooth={true} duration={500}>
+            <div className="group inline-block">
+              <button
+                type="button"
+                className="flex items-center gap-2 text-darkPrimary bg-white hover:bg-gray-100 focus:ring-2 focus:outline-none focus:ring-darkSecondary font-semibold rounded-lg text-md px-5 py-2.5 text-center 
       transition-all duration-300 ease-in-out transform hover:scale-105 
       hover:shadow-[0_0_20px_rgba(129,33,208,0.7)] 
       "
-            >
-              <MdOutlineMailOutline className="text-xl group-hover:animate-jello" />
-              Hire Me
-            </button>
-          </div>
-
+              >
+                <MdOutlineMailOutline className="text-xl group-hover:animate-jello" />
+                Hire Me
+              </button>
+            </div>
+          </Link>
           <button
             onClick={toggleMenu}
             type="button"
@@ -95,14 +97,13 @@ function Navbar() {
                   `block py-2 px-4 rounded-sm ${
                     isActive
                       ? "text-lightAccent text-md"
-                      : "text-lightPrimary hover:text-lightAccent"
+                      : "text-lightPrimary/70 hover:text-lightAccent"
                   }`
                 }
               >
                 Home
               </NavLink>
             </li>
-
             <li>
               <NavLink
                 to="/about"
@@ -110,7 +111,7 @@ function Navbar() {
                   `block py-2 px-4 rounded-sm ${
                     isActive
                       ? "text-lightAccent text-md"
-                      : "text-lightPrimary hover:text-lightAccent"
+                      : "text-lightPrimary/70 hover:text-lightAccent"
                   }`
                 }
               >
@@ -119,30 +120,44 @@ function Navbar() {
             </li>
             <li>
               <NavLink
-                to="/services"
+                to="/resume"
                 className={({ isActive }) =>
                   `block py-2 px-4 rounded-sm ${
                     isActive
                       ? "text-lightAccent text-md"
-                      : "text-lightPrimary hover:text-lightAccent"
+                      : "text-lightPrimary/70 hover:text-lightAccent"
                   }`
                 }
               >
-                Skills
+                Resume
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/contact"
+                to="/testimony"
                 className={({ isActive }) =>
                   `block py-2 px-4 rounded-sm ${
                     isActive
                       ? "text-lightAccent text-md"
-                      : "text-lightPrimary hover:text-lightAccent"
+                      : "text-lightPrimary/70 hover:text-lightAccent"
                   }`
                 }
               >
-                Projects
+                Testimony
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/quotes"
+                className={({ isActive }) =>
+                  `block py-2 px-4 rounded-sm ${
+                    isActive
+                      ? "text-lightAccent text-md"
+                      : "text-lightPrimary/70 hover:text-lightAccent"
+                  }`
+                }
+              >
+                Quotes
               </NavLink>
             </li>
             <li className="flex items-center">

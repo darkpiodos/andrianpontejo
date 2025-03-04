@@ -4,7 +4,10 @@ export default function Banner() {
     <section className="bg-gradient-secondaryDark w-full md:min-h-[60vh] bg-cover bg-center flex items-center justify-center pt-32 md:mt-0 md:px-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
         {/* Left Column - Text */}
-        <div className="text-center p-4 md:p-0 md:text-left  space-y-3 md:space-y-6 ">
+        <div
+          className="text-center p-4 md:p-0 md:text-left  space-y-3 md:space-y-6 "
+          data-aos="fade-right"
+        >
           <h1 className="text-2xl md:text-5xl font-bold  text-lightAccent">
             Hi! I'm Andrian
           </h1>
@@ -51,7 +54,7 @@ export default function Banner() {
         </div>
 
         {/* Right Column - Profile Image */}
-        <div className="">
+        <div className="" data-aos="fade-left">
           <div className="absolute inset-1 -bottom-1 -left-2 w-full h-[50vh] bg-purple-500 opacity-20 rounded-full blur-3xl"></div>
           <img
             src="/assets/andrianpontejo.PNG"

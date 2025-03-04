@@ -1,10 +1,10 @@
 import Home from "../pages/Home";
-import About from "../pages/About";
-import Skills from "../pages/Skills";
-import Projects from "../pages/Projects";
-import HireMe from "../pages/HireMe";
 import MainContainer from "../components/MainContainer";
 import NotFound from "../components/NotFound";
+import Resume from "../pages/Resume";
+import Testimony from "../pages/Testimony";
+import About from "../pages/About";
+import Quotes from "../pages/Quotes";
 
 const routes = [
   {
@@ -15,6 +15,7 @@ const routes = [
       </MainContainer>
     ),
   },
+
   {
     path: "/about",
     element: (
@@ -24,26 +25,26 @@ const routes = [
     ),
   },
   {
-    path: "/skills",
+    path: "/resume",
     element: (
       <MainContainer>
-        <Skills />
+        <Resume />
       </MainContainer>
     ),
   },
   {
-    path: "/projects",
+    path: "/testimony",
     element: (
       <MainContainer>
-        <Projects />
+        <Testimony />
       </MainContainer>
     ),
   },
   {
-    path: "/hire-me",
+    path: "/quotes",
     element: (
       <MainContainer>
-        <HireMe />
+        <Quotes />
       </MainContainer>
     ),
   },

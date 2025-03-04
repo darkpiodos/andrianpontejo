@@ -52,7 +52,10 @@ export default function AboutMe() {
         }}
       />
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
-        <div className="text-center p-4 md:p-0 md:text-left  space-y-3 md:space-y-6 md:mt-10">
+        <div
+          className="text-center p-4 md:p-0 md:text-left  space-y-3 md:space-y-6 md:mt-10"
+          data-aos="fade-right"
+        >
           <h1 className="text-2xl md:text-5xl font-bold text-darkPrimary dark:text-lightPrimary text-start">
             About Me
           </h1>
@@ -70,7 +73,10 @@ export default function AboutMe() {
         </div>
       </div>
 
-      <div className="max-w-7xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
+      <div
+        className="max-w-7xl md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center "
+        data-aos="fade-left"
+      >
         <div className=" p-4 md:p-0 md:text-left  space-y-3 md:space-y-6 md:mt-10 hidden md:block"></div>
 
         <div className=" p-4 md:p-0 md:texta-left  space-y-3 md:space-y-6 md:mt-10">

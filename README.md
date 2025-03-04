@@ -24,6 +24,17 @@ plugins: [],
 
 import './index.css'
 
+react aos
+react scroll
+npm install react-countup
+npm install aos --save
+npm i react-scroll
+npm install react-intersection-observer
+npm i react-typed
+npm i framer-motion
+
+npm install react-slick slick-carousel
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
